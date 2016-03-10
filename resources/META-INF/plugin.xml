@@ -1,0 +1,26 @@
+<idea-plugin version="2">
+    <id>com.chornsby.intellij.plugins.django.Migrations</id>
+    <name>Django migrations</name>
+    <version>1.0</version>
+    <vendor email="charlie.hornsby@hotmail.co.uk" url="chornsby.github.io">chornsby</vendor>
+
+    <description><![CDATA[
+        Custom run configurations for Django migrations
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Added basic Django migrations run configurations
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="141.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.python</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <configurationType implementation="com.chornsby.intellij.plugins.django.MigrationRunConfigurationType"/>
+        <runConfigurationProducer implementation="com.chornsby.intellij.plugins.django.MigrationRunConfigurationProducer"/>
+    </extensions>
+
+</idea-plugin>
